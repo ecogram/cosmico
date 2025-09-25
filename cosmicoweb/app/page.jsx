@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button'
+import { CardContent } from '@/components/ui/card'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <Button>Clicl </Button>
-    </div>
+   <Card><CardContent>
+    </CardContent></Card>
   )
 }
 
