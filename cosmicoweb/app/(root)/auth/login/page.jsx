@@ -8,14 +8,19 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { zSchema } from '@/lib/zodSchems'
 const LoginPage = () => {
-  const formSchema = zSchema.pick({email: true, password: true})
+  const formSchema = zSchema.pick({email: true, password: true}) 
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   });
+  const handleLoginSubmit =async (value)=>{
+    e.preventDefault()
+    const isValid = await form.trigger()
+    if(!isValid) return
+  }
   return (
     <Card className="w-[450px]">
         <CardContent>
