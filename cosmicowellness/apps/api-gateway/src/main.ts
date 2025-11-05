@@ -30,7 +30,6 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later.',
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req:any) => req.ip,
 });
 app.use(limiter);
 app.get("/gateway-health-check", (req, res) => {
