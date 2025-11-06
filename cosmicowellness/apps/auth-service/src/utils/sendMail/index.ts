@@ -33,7 +33,7 @@ const renderEmailTemplate = async (templateName: string,
 };
 
 //send an email using nodemailer 
- export const sendEmauil = async(to :string , subject:string ,templateName:string,data:Record<string,any>)=>{
+ export const sendEmail = async(to :string , subject:string ,templateName:string,data:Record<string,any>)=>{
     try {
         const html =await renderEmailTemplate(templateName, data);
         await transporter.sendMail({
