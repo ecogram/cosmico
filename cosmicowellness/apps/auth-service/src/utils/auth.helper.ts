@@ -2,7 +2,7 @@ import crypto from 'crypto';
 import { ValidationError } from '../../../../packages/error-handler';
 import redis from '../../../../packages/libs/redis';
 import { send } from 'process';
-import { sendEmail } from '../sendMail';
+import { sendEmail } from './sendMail';
 import { NextFunction } from 'express';
 
 
